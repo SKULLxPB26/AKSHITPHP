@@ -1,18 +1,25 @@
-<html>
-<head>
-<title>practicing array</title>
-</head>
-<body>
 <?php
-$akshit=array("height"=>180,"weight"=>104,"education"=>"bca","college"=>"a.s.college");
-$keys=array_keys($akshit);
-$values=array_values($akshit);
+$a=array( 
+    array(1,2),   // 0
+    array(5,6),   // 1 
+    array(9,10)); // 2
 
-$inti=0;
-for($i=0;$i<count($akshit);$i++)
-{
-    echo("the description of akshit is $keys[$i] = $values[$i]<BR>");
-}
+    $b = array(
+    array(11,22),
+    array(55,66),
+    array(99,100));
+
+$c=[];
+    for($i=0; $i < count($a); $i++){
+        for($j=0; $j < count($a[$i]); $j++ ){
+             $c[$i][$j] =$a[$i][$j] + $b[$i][$j];
+             echo  "     " . $c[$i][$j] ;
+            }
+
+            echo "<br>";
+        }
+
+ echo $c[1][0];
+   
+
 ?>
-</body>
-</html>
